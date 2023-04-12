@@ -31,7 +31,7 @@
   #generate-button {
     padding: 10px;
     font-size: 16px;
-    background-color: #3cb6a9;
+    background-color: #3399ff;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -49,9 +49,7 @@
   }
       </style>
      <div>
-  <center>
-  <h1>Chat</h1></center>
-    <div class="input-container">
+      <div class="input-container">
       <input type="text" id="prompt-input" placeholder="Enter a prompt">
       <button id="generate-button">Generate Text</button>
     </div>
