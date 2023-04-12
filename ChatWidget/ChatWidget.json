@@ -17,7 +17,7 @@
             "ignoreIntegrity": true
         },
         {
-            "kind": "auth",
+            "kind": "builder",
             "tag": "com-kruse-chatwidget",
             "url": "https://gavrilova-ev.github.io/ChatWidget/ChatAuthWidget.js",
             "integrity": "",
