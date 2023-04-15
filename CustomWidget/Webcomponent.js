@@ -24,8 +24,6 @@
             console.log("OnClick Triggered");     
             
         }        
-        
-    }
-
+       
     customElements.define('custom-button', PerformanceHelp);
 })();
