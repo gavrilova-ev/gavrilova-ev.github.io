@@ -85,6 +85,7 @@
         const prompt = promptInput.value;
         const url = "https://us-central1-aiplatform.googleapis.com/v1/projects/cloud-llm-preview1/locations/us-central1/endpoints/" 
         + endpoint + ":predict";
+        // this won't work - needs oauth2
         const response = await fetch(url, {
           method: "POST",
           headers: {
