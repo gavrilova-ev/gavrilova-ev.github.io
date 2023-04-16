@@ -73,28 +73,34 @@
       generatedText.value = "";
       const {
         apiKey
-      } = this._props || "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";
+      } = this._props;
       const {
-        max_tokens
-      } = this._props || 1024;
+        endpoint
+      } = this._props;
       const generateButton = this.shadowRoot.getElementById("generate-button");
       generateButton.addEventListener("click", async () => {
         const promptInput = this.shadowRoot.getElementById("prompt-input");
         const generatedText = this.shadowRoot.getElementById("generated-text");
         generatedText.value = "Finding result...";
         const prompt = promptInput.value;
-        const response = await fetch("https://www.example.com", {
+        const url = "https://us-central1-aiplatform.googleapis.com/v1/projects/cloud-llm-preview1/locations/us-central1/endpoints/" 
+        + endpoint + ":predict";
+        const response = await fetch(url, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
             "Authorization": "Bearer " + apiKey
           },
           body: JSON.stringify({
-            "model": "text-davinci-002",
-            "prompt": prompt,
-            "max_tokens": parseInt(max_tokens),
-            "n": 1,
-            "temperature": 0.5
+            "instances": [
+              { "content": prompt}
+            ],
+            "parameters": {
+            "temperature": 0.2,
+            "maxOutputTokens": 1024,
+            "topK": 40,
+            "topP": 0.8
+            }
           })
         });
 
