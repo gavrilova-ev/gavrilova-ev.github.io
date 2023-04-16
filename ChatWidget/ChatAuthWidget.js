@@ -75,8 +75,8 @@ input[type="color"]::-webkit-color-swatch {
     </tr>
     <tr>
     <td>
-    <p>Result Max Length</p>
-    <input id="builder_max_tokens" type="number" placeholder="Enter Result Max Length">
+    <p>Endpoint</p>
+    <input id="builder_endpoint" type="number" placeholder="Enter Endpoint">
     </td>
     </tr>
     
@@ -103,7 +103,7 @@ input[type="color"]::-webkit-color-swatch {
                detail: {
                   properties: {
                      apiKey: this.apiKey,
-                     max_tokens: this.max_tokens
+                     endpoint: this.endpoint
                   },
                },
             })
@@ -117,11 +117,11 @@ input[type="color"]::-webkit-color-swatch {
          return this._shadowRoot.getElementById("builder_apiKey").value;
       }
 
-      set max_tokens(_max_tokens) {
-         this._shadowRoot.getElementById("builder_max_tokens").value = _max_tokens;
+      set endpoint(_endpoint) {
+         this._shadowRoot.getElementById("builder_endpoint").value = _endpoint;
       }
-      get max_tokens() {
-         return this._shadowRoot.getElementById("builder_max_tokens").value;
+      get endpoint() {
+         return this._shadowRoot.getElementById("builder_endpoint").value;
       }
 
    }
