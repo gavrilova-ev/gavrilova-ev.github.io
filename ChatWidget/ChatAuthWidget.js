@@ -76,7 +76,7 @@ input[type="color"]::-webkit-color-swatch {
     <tr>
     <td>
     <p>Endpoint</p>
-    <input id="builder_endpoint" type="number" placeholder="Enter Endpoint">
+    <input id="builder_endpoint" type="text" placeholder="Enter Endpoint">
     </td>
     </tr>
     
