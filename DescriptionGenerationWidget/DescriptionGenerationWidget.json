@@ -1,0 +1,78 @@
+{
+    "id": "com.kruse.chatwidget",
+    "version": "1.0.0",
+    "name": "Chat Widget",
+    "description": "Custom Widget for SAP Analytics Cloud integrating chat to explain trends in charts.",
+    "newInstancePrefix": "ChatWidget",
+    "vendor": "EK",
+    "eula": "",
+    "license": "MIT",
+    "icon": "",
+    "webcomponents": [
+        {
+            "kind": "main",
+            "tag": "com-kruse-chatwidget",
+            "url": "https://gavrilova-ev.github.io/ChatWidget/ChatWidget.js",
+            "integrity": "",
+            "ignoreIntegrity": true
+        },
+        {
+            "kind": "builder",
+            "tag": "com-kruse-chatwidget",
+            "url": "https://gavrilova-ev.github.io/ChatWidget/ChatAuthWidget.js",
+            "integrity": "",
+            "ignoreIntegrity": true
+        }
+    ],
+    "properties": {
+        "apiKey": {
+            "description": "Api Key",
+            "type": "string",
+            "default": ""
+        },
+        "max_tokens": {
+            "description": "Result Max Length",
+            "type": "integer",
+            "default": 1024
+        }
+    },
+    "methods": {
+        "setApiKey": {
+            "description": "Set Api Key",
+            "parameters": [
+                {
+                    "name": "apiKey",
+                    "type": "string",
+                    "description": "Api Key"
+                }
+            ],
+            "body": "this.apiKey = apiKey;"
+        },
+        "getApiKey": {
+            "returnType": "string",
+            "description": "Return Api Key",
+            "body": "return this.apiKey;"
+        },
+        "setMax_tokens": {
+            "description": "Set Result Max Length",
+            "parameters": [
+                {
+                    "name": "max_tokens",
+                    "type": "integer",
+                    "description": "Result Max Length"
+                }
+            ],
+            "body": "this.max_tokens = max_tokens;"
+        },
+        "getMax_tokens": {
+            "returnType": "integer",
+            "description": "Return Result Max Length",
+            "body": "return this.max_tokens;"
+        }
+    },
+    "events": {
+        "onClick": {
+            "description": "User Clicked."
+        }
+    }
+}
