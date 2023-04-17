@@ -30,10 +30,10 @@
             "type": "string",
             "default": ""
         },
-        "max_tokens": {
-            "description": "Result Max Length",
-            "type": "integer",
-            "default": 1024
+        "endpoint": {
+            "description": "Endpoint",
+            "type": "string",
+            "default": ""
         }
     },
     "methods": {
@@ -53,21 +53,21 @@
             "description": "Return Api Key",
             "body": "return this.apiKey;"
         },
-        "setMax_tokens": {
-            "description": "Set Result Max Length",
+        "setEndpoint": {
+            "description": "Set Endpoint",
             "parameters": [
                 {
-                    "name": "max_tokens",
-                    "type": "integer",
-                    "description": "Result Max Length"
+                    "name": "endpoint",
+                    "type": "string",
+                    "description": "Endpoint"
                 }
             ],
-            "body": "this.max_tokens = max_tokens;"
+            "body": "this.endpoint = endpoint;"
         },
-        "getMax_tokens": {
-            "returnType": "integer",
-            "description": "Return Result Max Length",
-            "body": "return this.max_tokens;"
+        "getEndpoint": {
+            "returnType": "string",
+            "description": "Return Endpoint",
+            "body": "return this.endpoint;"
         }
     },
     "events": {
