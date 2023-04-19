@@ -1,7 +1,7 @@
 {
     "id": "com.palkin.asksacwidget",
     "version": "1.0.0",
-    "name": "Chat Widget",
+    "name": "Ask SAC with Google AI",
     "description": "A widget to chat with Google Vertex AI about the data displayed on the SAC Story",
     "newInstancePrefix": "AskSac",
     "vendor": "Viktor Palkin",
