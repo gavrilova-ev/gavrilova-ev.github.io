@@ -1,25 +1,25 @@
 {
-    "id": "com.kruse.chatwidget",
+    "id": "com.palkin.asksacwidget",
     "version": "1.0.0",
     "name": "Chat Widget",
-    "description": "Custom Widget for SAP Analytics Cloud integrating chat to explain trends in charts.",
-    "newInstancePrefix": "ChatWidget",
-    "vendor": "EK",
+    "description": "A widget to chat with Google Vertex AI about the data displayed on the SAC Story",
+    "newInstancePrefix": "AskSac",
+    "vendor": "Viktor Palkin",
     "eula": "",
     "license": "MIT",
     "icon": "",
     "webcomponents": [
         {
             "kind": "main",
-            "tag": "com-kruse-chatwidget",
-            "url": "https://gavrilova-ev.github.io/ChatWidget/ChatWidget.js",
+            "tag": "com-palkin-asksac",
+            "url": "https://storage.googleapis.com/sap-ce-custom-widget-store-46714/askSac/askSacWidget.js",
             "integrity": "",
             "ignoreIntegrity": true
         },
         {
             "kind": "builder",
-            "tag": "com-kruse-chatwidget",
-            "url": "https://gavrilova-ev.github.io/ChatWidget/ChatAuthWidget.js",
+            "tag": "com-palkin-asksac",
+            "url": "https://storage.googleapis.com/sap-ce-custom-widget-store-46714/askSac/auth.js",
             "integrity": "",
             "ignoreIntegrity": true
         }
